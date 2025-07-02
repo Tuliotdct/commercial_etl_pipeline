@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
-from db_credentials import get_secret
+from db_application.db_credentials import get_secret
 
 
 def db_connection():

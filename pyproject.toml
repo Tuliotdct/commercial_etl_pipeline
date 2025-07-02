@@ -10,12 +10,19 @@ requires-python = ">=3.10"
 dependencies = [
     "pandas (>=2.3.0,<3.0.0)",
     "boto3 (>=1.38.36,<2.0.0)",
-    "sqlalchemy (>=2.0.41,<3.0.0)"
+    "sqlalchemy (>=2.0.41,<3.0.0)",
+    "python-io (>=0.3,<0.4)",
+    "pyarrow (>=20.0.0,<21.0.0)",
+    "faker (>=37.4.0,<38.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)"
 ]
 
 [tool.poetry]
-packages = [{include = "commercial_etl_pipeline", from = "src"}]
-
+packages = [
+  { include = "db_application", from = "src" },
+  { include = "data_warehouse", from = "src" }
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
