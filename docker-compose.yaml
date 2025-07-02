@@ -1,0 +1,9 @@
+services:
+  commercial_pipeline:
+    build: .
+    container_name: commercial_etl_pipeline
+    working_dir: /app
+    entrypoint: python
+    volumes:
+      - .:/app
+      - ~/.aws:/root/.aws:ro 
