@@ -111,3 +111,6 @@ airflow/unittests.cfg
 
 # AWS credentials/config (never commit this!)
 .aws/
+
+# Ignore local Parquet export files
+exports/
